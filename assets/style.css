@@ -1,0 +1,26 @@
+
+/* w3l-header */
+:root {
+    --theme-color: #21174a;
+    --theme-yellow: #fac70b;
+    --theme-rose: #df0e62;
+    --theme-title: #0c0f0a;
+    --theme-nav: #262626;
+    --theme-dark: #111;
+    --theme-lite: #f6f6f6;
+    --theme-blue: #127681;
+    --theme-para: #888;
+    --theme-white: #fff;
+    --theme-hd-bg: #fff;
+    --theme-border: #f0f0f0;
+    --theme-fm-border: #ddd;
+  
+  }
+.w3l-header{
+   padding:0px 0px;
+   height: 70px;
+   background:var(--theme-hd-bg);
+   display:grid;
+   align-items:center;
+
+}
