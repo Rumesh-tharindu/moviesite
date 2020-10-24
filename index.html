@@ -9,10 +9,11 @@
     <script src="https://use.fontawesome.com/ff31560acf.js"></script>
      <link rel="stylesheet" href="assets/css/owl.carousel.css">
      <link rel="stylesheet" href="assets/css/owl.theme.css">
-     <link rel="stylesheet" href="assets/css/owl.theme.green.css">
+     
+     <link rel="stylesheet" href="assets/css/magnific-popup.css">
 </head>
 <body>
-    <header class="w3l-header">
+    <header id="site-header" class="w3l-header  fixed-top">
         <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0">
             <div class="container">
               <h1><a class="navbar-brand" href="index.html">
@@ -94,6 +95,10 @@
                           </span>
                           <h6>Watch trailer</h6>
                         </a>
+                         <div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
+                          <iframe src="https://player.vimeo.com/video/358205676" allow="autoplay; fullscreen"
+                          allowfullscreen=""></iframe>
+                         </div>
                       </div>
               </div>
             </li>
@@ -112,16 +117,125 @@
       </div>
       </div>
     </section>
+   <!--//banner Slider-->
+
+    <section class="w3l-grid">
+      <div class="grids-main py-5">
+        <div class="container py-lg-3">
+        <div class="headerhny-title">
+          <div class="w3l-title-grids">
+            <div class="headerhny-left">
+              <h4 class="hny-title">Popular Movies</h4>
+            </div>
+            <div class="headerhny-right text-lg-right">
+              <h4 ><a class="show-title" href="">show all</a></h4>
+            </div>
+          </div>
+        </div>
+         <div class="w3l-populohny-grids">
+            <div class="item vhny-grid">
+              <div class="box-16">
+              <a href="">
+                <figure>
+                  <img class="img-fluid" src="assets/images/m7.jpg" alt="">
+                </figure>
+                <div class="box-content">
+                  <h3 class="title">Forzen 2</h3>
+                  <h4><span class="post"><span class="fa fa-clock-o"></span> 1 Hr 4 min</span>
+                     <span class="fa fa-heart text-right"></span>
+
+                  </h4>
+
+                </div>
+                <span class="fa fa-play video-icon "></span>
+              </a>
+            </div>
+            </div>
+
+            <div class="item vhny-grid">
+              <div class="box-16">
+              <a href="">
+                <figure>
+                  <img class="img-fluid" src="assets/images/m3.jpg" alt="">
+                </figure>
+                <div class="box-content">
+                  <h3 class="title">Forzen 2</h3>
+                  <h4 ><span ><span class="fa fa-clock-o"></span>1 Hr 4 min</span>
+                     <span class="fa fa-heart"></span>
+
+                  </h4>
+
+                </div>
+                <span class="fa fa-play video-icon "></span>
+              </a>
+            </div>
+            </div>
+            <div class="item vhny-grid">
+              <div class="box-16">
+              <a href="">
+                <figure>
+                  <img class="img-fluid" src="assets/images/m4.jpg" alt="">
+                </figure>
+                <div class="box-content">
+                  <h3 class="title">Forzen 2</h3>
+                  <h4><span><span class="fa fa-clock-o"></span>1 Hr 4 min</span>
+                     <span class="fa fa-heart"></span>
+
+                  </h4>
+
+                </div>
+                <span class="fa fa-play video-icon "></span>
+              </a>
+            </div>
+            </div>
+            <div class="item vhny-grid">
+              <div class="box-16">
+              <a href="">
+                <figure>
+                  <img class="img-fluid" src="assets/images/m5.jpg" alt="">
+                </figure>
+                <div class="box-content">
+                  <h3 class="title">Forzen 2</h3>
+                  <h4><span><span class="fa fa-clock-o"></span>1 Hr 4 min</span>
+                     <span class="fa fa-heart"></span>
+
+                  </h4>
+
+                </div>
+                <span class="fa fa-play video-icon "></span>
+              </a>
+            </div>
+            </div>
+         </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script>
       $('document').ready(()=>{
+        $(window).on("scroll",()=>{
+          var scroll=$(window).scrollTop()
+          if(scroll>=80){
+            $('#site-header').addClass('nav-fixed')
+          }
+          else{
+            $('#site-header').removeClass('nav-fixed')
+          }
+        })
         $('.owl-carousel').owlCarousel({
            loop:true,
           margin:10,
           nav:true,
           dots:false,
-          
+          autoplay:true,
           autoplaySpeed:1000,
           autoplayTimeOut:5000,
           stagePadding:280,
@@ -140,6 +254,22 @@
                   nav:true
               }
           }
+      })
+
+      // small dialog one //
+      $('.popup-with-zoom-anim').magnificPopup({
+         type:'inline',
+         fixedContentPos: false,
+          fixedBgPos: true,
+
+          overflowY: 'auto',
+
+          closeBtnInside: true,
+          preloader: false,
+
+          midClick: true,
+          removalDelay: 300,
+          mainClass: 'my-mfp-zoom-in'
       })
             })
     </script>
